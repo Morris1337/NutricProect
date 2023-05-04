@@ -96,8 +96,9 @@ let client = {
            document.getElementById("startFuncBrok").innerHTML = ("Возраст привышает 40 лет. Рекомендуеться не считать идиальный вес после 40 лет.")
      }
     }
-    
+    //lol
     brok();
+
     
     if(client.age <= 40){
       if(client.sex === "м" || "М"){
