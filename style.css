@@ -21,6 +21,11 @@
     src: url(font/ZtChablisSlow.ttf);
 }
 
+@font-face {
+    font-family: "MugwortMaximum";
+    src: url(font/MugwortMaximum.ttf);
+}
+
 .headerInput{
     display: flex;
     list-style: none;
@@ -84,7 +89,7 @@ body{
 
 .button20 {
     width: 214px;
-    font-family: "MugwortMaximum";
+    font-family: "ZtChablisSlow";
     font-size: 15px;
     position: relative;
     display: inline-block;
@@ -135,13 +140,16 @@ body{
 
 
 .textDisplay{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-top: 24px;
     background-color: #ECC99B;
     border-radius: -1px;
     border-style: solid;
-    width: 700px;
-    height: 300px;
-    margin-left: 28vw;
+
+    margin-left: 30vw;
+    margin-right: 30vw;
     margin-top: 12vw;
     padding: 20px;
     line-height: 1.3;
@@ -165,5 +173,22 @@ h1{
     font-size: 3.5vw;
     margin-left: 70px;
     margin-top: 37px;
+    
+}
+
+.imtInfo{
+    position: absolute;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    width: 250px;
+    left: 40em;
+    top: 8.5em;
+}
+
+.hForJS{
+    font-family: "ZtChablisSlow";
+    font-size: 18px;
+    line-height: 2.5;
+    margin: 0;
     
 }

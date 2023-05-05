@@ -49,7 +49,7 @@ let client = {
     
       function abdom(){
       
-       if(client.sex === "м" || "М"){
+       if(client.sex === "м" || "М" || "m" || "M"){
     
           if(abdominalObesity <= 0.85){
                 document.getElementById("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Отлично" + " (<0.85)")
@@ -62,7 +62,7 @@ let client = {
                 
                 ("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Критическое" + " (0.96>)")
           }
-        }else if(client.sex === "ж"||"Ж"){
+        }else if(client.sex === "ж"||"Ж" || "f" || "F"){
           if(abdominalObesity <= 0.75){
                 document.getElementById("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Отлично" + " (<0.85)")
           }else if(abdominalObesity <= 0.79){
@@ -85,9 +85,9 @@ let client = {
     
     function brok(){
       if(client.age <= 40){
-      if (client.sex === "м" || "М"){
+      if (client.sex === "м" || "М" || "m" || "M"){
             document.getElementById("startFuncBrok").innerHTML = ("Ваш идеальный вес: " + brokFormMale)
-      }else if (client.sex === "ж"||"Ж"){
+      }else if (client.sex === "ж"||"Ж" || "f" || "F"){
             document.getElementById("startFuncBrok").innerHTML = ("Ваш идеальный вес: " + brokFormFemale)
       }else{
             document.getElementById("startFuncBrok").innerHTML = ("Не известный пол!")
@@ -101,17 +101,17 @@ let client = {
 
     
     if(client.age <= 40){
-      if(client.sex === "м" || "М"){
+      if(client.sex === "м" || "М" || "m" || "M"){
       BMRM = 66 + (13.7 * brokFormMale) + (5 * client.heigth) - (6.76 * client.age)
-      }else if(client.sex === "ж"||"Ж"){
+      }else if(client.sex === "ж"||"Ж" || "f" || "F"){
       BMRF = 655 + (9.6 * brokFormFemale) + (1.8 * client.heigth) - (4.7 * client.age)
       }else{
         document.getElementById("startFuncBmr").innerHTML = ("Не известный пол!")
       }
     }else{
-      if(client.sex === "м" || "М"){
+      if(client.sex === "м" || "М" || "m" || "M"){
       BMRM = 66 + (13.7 * iWantWaight) + (5 * client.heigth) - (6.76 * client.age)
-      }else(client.sex === "ж"||"Ж");{
+      }else(client.sex === "ж"||"Ж" || "f" || "F");{
       BMRF = 655 + (9.6 * iWantWaight) + (1.8 * client.heigth) - (4.7 * client.age)
       }
       
@@ -119,9 +119,9 @@ let client = {
     
     
     function bened (){
-      if(client.sex === "м"){
+      if(client.sex === "м" || "М" || "m" || "M"){
       document.getElementById("startFuncBmr").innerHTML = ("Минимальное количесвто ккал в день: " + BMRM)
-      }else if (client.sex === "ж"||"Ж"){
+      }else if (client.sex === "ж"||"Ж" || "f" || "F"){
       document.getElementById("startFuncBmr").innerHTML = ("Минимальное количесвто ккал в день: " + BMRF)
       }else{
       document.getElementById("startFuncBmr").innerHTML = ("Не известный пол!")
@@ -131,9 +131,9 @@ let client = {
     bened();
     
     
-    if(client.sex === "м" || "М"){
+    if(client.sex === "м" || "М" || "m" || "M"){
       AMRM = BMRM * (+prompt("Укажите коэффициент(1.2 очень низкая активность)(1.4 Сидячая работа низкая активность)(1.6 Более активная работа средняя активность)(1.8 Высокая активность)"))
-    }else if(client.sex === "ж"||"Ж"){
+    }else if(client.sex === "ж"||"Ж" || "f" || "F"){
       AMRF = BMRF * (+prompt("Укажите коэффициент(1.2 очень низкая активность)(1.4 Сидячая работа низкая активность)(1.6 Более активная работа средняя активность)(1.8 Высокая активность)"))
     }else{
       document.getElementById("startFuncResult").innerHTML = ("Не известный пол!")
