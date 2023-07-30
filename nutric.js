@@ -58,9 +58,7 @@ let client = {
           }else if(abdominalObesity <= 0.95){
                 document.getElementById("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Среднее" + " (0.90 - 0.95)")
           }else{
-                document.getElementByI
-                
-                ("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Критическое" + " (0.96>)")
+                document.getElementByI("startFuncAbdom").innerHTML = ("Абдоминальное ожиренее: " + abdominalObesity + " Критическое" + " (0.96>)")
           }
         }else if(client.sex === "ж"||"Ж" || "f" || "F"){
           if(abdominalObesity <= 0.75){
@@ -79,19 +77,20 @@ let client = {
     
     abdom();
 
-    brokFormMale = (client.heigth - 100) * 0.9
-    brokFormFemale = (client.heigth - 100) * 0.85
+    brokFormFemale = (client.heigth - 100) * 0.85;
+    brokFormMale = (client.heigth - 100) * 0.9;
+    
     
     
     function brok(){
       if(client.age <= 40){
-      if (client.sex === "м" || "М" || "m" || "M"){
+            if (client.sex === "м" || "М" || "m" || "M"){
             document.getElementById("startFuncBrok").innerHTML = ("Ваш идеальный вес: " + brokFormMale)
-      }else if (client.sex === "ж"||"Ж" || "f" || "F"){
+            }else if (client.sex === "ж"||"Ж" || "f" || "F"){
             document.getElementById("startFuncBrok").innerHTML = ("Ваш идеальный вес: " + brokFormFemale)
-      }else{
+            }else{
             document.getElementById("startFuncBrok").innerHTML = ("Не известный пол!")
-      }
+            }
      }else{
            document.getElementById("startFuncBrok").innerHTML = ("Возраст привышает 40 лет. Рекомендуеться не считать идиальный вес после 40 лет.")
      }
