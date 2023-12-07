@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script defer src="nutric.js"></script>
-    <script src="info.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="Rendenvous.ttf" as="font-face">
 
@@ -26,9 +24,7 @@
             <li>
                 <input class="button20" onclick="startFunc()" type="button" value="Нажми для начала подсчетов">
             </li>
-            <li>
-                <input class="button20" onclick="infoIMT()" type="button" value="Инфор об ИМТ">
-            </li>
+                <button id="imtInfoBtn" class="button20"> Инфор об ИМТ </button>
             <li>
                 <input class="button20" onclick="startFunc()" type="button" value="Нажми для начала подсчетов">
             </li>
@@ -47,7 +43,7 @@
         </nav>
     </section>
     <section>
-        <div>
+        <p>
             <form action="">
                 <nav>
 
@@ -71,18 +67,20 @@
                 </nav>
             </form>
             <nav>
-                <div class="textDisplay imtInfo">
-                    <h2 class="hForJS" id="hInfoIMTOne"></h2>
-                    <div id="infoIMTOne"></div>
-                    <div id="infoIMTTwo"></div>
-                    <div id="infoIMTThre"></div>
-                    <div id="infoIMTFour"></div>
-                    <div id="infoIMTFive"></div>
-                    <div id="infoIMTSix"></div>
-                    <div id="infoIMTSeven"></div>
+                <div id="imtInfo" class="imtInfo display-none">
+                    <h2 class="hForJS">ИМТ (Индекс массы тела)</h2>
+                    <p>Острый дефици массы: <16</p>
+                    <p>Недостатоная масса тела: 16 - 18.5</p>
+                    <p>Норма: 18.6 - 25</p>
+                    <p>Избыточная масса тела: 25.1 - 30</p>
+                    <p>Ожирение первой степени: 30.1 - 35</p>
+                    <p>Ожирение второй степени: 35.1 - 40</p>
+                    <p>Ожирение третей степени: 40></p>
                 </div>
             </nav>
         </div>
     </section>
 </body>
+<script src="info.js"></script>
+<script src="nutric.js"></script>
 </html>
