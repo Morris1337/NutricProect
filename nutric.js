@@ -1,5 +1,9 @@
+const resultPlace = document.querySelector(".textDisplay")
+const btnKalk = document.querySelector("#btn-kalk")
 
-
+btnKalk.addEventListener("click", ()=>{
+      startFunc()
+})
 
 function startFunc(){
 
